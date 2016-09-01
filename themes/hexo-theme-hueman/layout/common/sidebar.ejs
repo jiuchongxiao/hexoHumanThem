@@ -1,0 +1,37 @@
+<aside id="sidebar">
+
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <!--
+    去掉分享
+    <div class="sidebar-top">
+        <p><%= __('sidebar.follow') %>:</p>
+        <ul class="social-links">
+            <% for (var i in theme.customize.social_links) { %>
+                <% if (theme.customize.social_links[i]) { %>
+                <li>
+                    <a class="social-tooltip" title="<%= i %>" href="<%- url_for(theme.customize.social_links[i]) %>" target="_blank">
+                        <i class="icon fa fa-<%= i %>"></i>
+                    </a>
+
+                </li>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>-->
+
+    <% if (is_post()) { %>
+        <%- partial('post/nav', {post: page}) %>
+    <% } %>
+    <div class="widgets-container">
+
+        <% if (theme.widgets) { %>
+            <% theme.widgets.forEach(function(widget) { %>
+                <%if(page.category!="产品系列" && page.category!="大米类" && page.category!="月饼类" && page.category!="粽子类" && page.category!="糕点类" && widget=="recent_posts"){%>
+                    <%- partial('widget/' + widget+"_news_style") %>
+                <%}else{%>
+                    <%- partial('widget/' + widget) %>
+                <%}%>
+            <% }) %>
+        <% } %>
+    </div>
+</aside>

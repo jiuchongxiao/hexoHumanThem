@@ -1,0 +1,94 @@
+<% var last, postCount = 0; %>
+
+
+<div id="myCarousel" class="carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src='/css/images/1.jpg'>
+        </div>
+        <div class="item">
+            <img src='/css/images/2.jpg'>
+        </div>
+        <div class="item">
+            <img src='/css/images/3.jpg'>
+        </div>
+
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="carousel-control left" href="#myCarousel"
+       data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel"
+       data-slide="next">&rsaquo;</a>
+</div>
+
+<div style="margin:5px;">
+    <div style="display:inline-block;width: 350px;padding:10px;margin: 9px;">
+        <h3 class="article-title">公司简介</h3>
+        <% site.posts.each(function(post, i) { %>
+            <%post.categories.each(function(c){%>
+                <%if(c.name=="公司简介"){%>
+                     <%- partial('summary_main', { post: post,newsType:"公司简介" }) %>
+                <%}%>
+            <%})%>
+        <%})%>
+    </div>
+    <div style="display:inline-block;width: 350px;padding:10px;margin: 9px;">
+        <h3 class="article-title">最新动态</h3>
+        <% site.posts.each(function(post, i) { %>
+            <%post.categories.each(function(c){%>
+                <%if(c.name=="最新动态"){%>
+                    <%- partial('summary_main', { post: post,newsType:"最新动态" }) %>
+                <%}%>
+            <%})%>
+        <%})%>
+    </div>
+    <div style="display:inline-block;width: 350px;padding:10px;margin: 8px;">
+        <h3 class="article-title">联系方式</h3>
+        <% site.posts.each(function(post, i) { %>
+            <%post.categories.each(function(c){%>
+                <%if(c.name=="联系方式"){%>
+                     <%- partial('summary_main', { post: post,newsType:"联系方式" }) %>
+                <%}%>
+            <%})%>
+        <%})%>
+    </div>
+</div>
+
+
+<!--
+<% page.posts.each(function(post, i) { %>
+    <% var year = post.date.year(); %>
+    <% if (last != year) { %>
+        <% if (last != null) { %>
+            </div></section>
+        <% } %>
+        <% last = year; postCount = 0;%>
+        <section class="archives-wrap">
+
+            <div class="archives">
+    <% } %>
+    <% postCount++; %>
+    <% if (postCount % 2 == 1) { %>
+        <div class="article-row">
+    <% } %>
+        <%- partial('summary', { post: post }) %>
+    <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
+        </div>
+    <% } %>
+<% }) %>
+<% if (page.posts.length) { %>
+    </div></section>
+<% } %>
+<% if (page.total > 1) { %>
+    <nav id="page-nav">
+        <span class="pages"><%= _p('nav.current_page', page.current) %><%= _p('nav.total_page', page.total) %></span>
+        <%- paginator({prev_text: '&laquo;', next_text: '&raquo;'}) %>
+    </nav>
+<% } %>-->
