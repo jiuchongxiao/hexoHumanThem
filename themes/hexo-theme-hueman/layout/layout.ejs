@@ -2,10 +2,20 @@
 <body>
     <div id="wrap">
         <%- partial('common/header', null, {cache: !config.relative_link}) %>
+        <%if(is_home()){%>
+            <%- partial('common/lunbo')%>
+        <%}%>
+        <div>
+            <%if(!is_home()){%>
+            <%- partial('common/banner')%>
+            <%}%>
+        </div>
         <div class="container">
             <div class="main-body container-inner">
                 <%if(page.category){%>
+
                     <div class="main-body-inner">
+
                         <section id="main">
                             <%- partial('common/content-title') %>
                             <div class="main-body-content">
@@ -26,7 +36,7 @@
                 <%}%>
             </div>
         </div>
-        <%- partial('common/footer', null, {cache: !config.relative_link}) %>
+        <%- partial('common/footer_main')%>
         <%- partial('common/scripts') %>
     </div>
 </body>

@@ -11,24 +11,15 @@
         </div>
     <%}else if(newsType=="公司简介"){%>
         <div class="article-summary-inner">
-            <!--<%- partial('post/title', { class_name: 'article-title', linkable: true }) %>-->
             <% if (theme.customize.thumbnail === true) { %>
             <%- partial('common/thumbnail', { counter: true }) %>
             <% } %>
-            <div class="article-meta">
-                <p class="date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
-            </div>
             <p class="article-excerpt">
                 <%- excerpt(post) %>
             </p>
         </div>
     <%}else if(newsType=="联系方式"){%>
         <div class="article-summary-inner">
-            <!--<%- partial('post/title', { class_name: 'article-title', linkable: true }) %>-->
-
-            <div class="article-meta">
-                <p class="date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
-            </div>
             <p class="article-excerpt">
                 <%- excerpt(post) %>
             </p>

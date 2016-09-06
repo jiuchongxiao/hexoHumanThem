@@ -6,6 +6,5 @@ categories:
 
 comments: false
 ---
-经营理念
 
-{% img  /resource/images/a.png 300 100 ffffff %}
+{% img  /css/images/a.png 300 100 ffffff %}

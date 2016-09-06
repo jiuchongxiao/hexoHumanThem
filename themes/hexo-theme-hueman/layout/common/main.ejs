@@ -1,33 +1,5 @@
 <% var last, postCount = 0; %>
 
-
-<div id="myCarousel" class="carousel slide">
-    <!-- 轮播（Carousel）指标 -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <!-- 轮播（Carousel）项目 -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <img src='/css/images/1.jpg'>
-        </div>
-        <div class="item">
-            <img src='/css/images/2.jpg'>
-        </div>
-        <div class="item">
-            <img src='/css/images/3.jpg'>
-        </div>
-
-    </div>
-    <!-- 轮播（Carousel）导航 -->
-    <a class="carousel-control left" href="#myCarousel"
-       data-slide="prev">&lsaquo;</a>
-    <a class="carousel-control right" href="#myCarousel"
-       data-slide="next">&rsaquo;</a>
-</div>
-
 <div style="margin:5px;">
     <div style="display:inline-block;width: 350px;padding:10px;margin: 9px;">
         <h3 class="article-title">公司简介</h3>
@@ -39,7 +11,7 @@
             <%})%>
         <%})%>
     </div>
-    <div style="display:inline-block;width: 350px;padding:10px;margin: 9px;">
+    <div style="display:inline-block;width: 350px;padding:10px;margin: 8px;">
         <h3 class="article-title">最新动态</h3>
         <% site.posts.each(function(post, i) { %>
             <%post.categories.each(function(c){%>
@@ -61,34 +33,127 @@
     </div>
 </div>
 
+<div id="wrapper">
+    <div class="wrapper wrapper-content">
 
-<!--
-<% page.posts.each(function(post, i) { %>
-    <% var year = post.date.year(); %>
-    <% if (last != year) { %>
-        <% if (last != null) { %>
-            </div></section>
-        <% } %>
-        <% last = year; postCount = 0;%>
-        <section class="archives-wrap">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h3 style="font-size:20px;margin: 10px 20px 20px 20px;">产品</h3>
 
-            <div class="archives">
-    <% } %>
-    <% postCount++; %>
-    <% if (postCount % 2 == 1) { %>
-        <div class="article-row">
-    <% } %>
-        <%- partial('summary', { post: post }) %>
-    <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
+                    </div>
+                    <div class="ibox-content">
+                        <div class="carousel slide" id="carousel3">
+                            <div class="carousel-inner">
+                                <%var productionListCount=1%>
+                                <% site.posts.each(function(post, i) { %>
+                                    <% post.categories.each(function(c){%>
+
+                                        <%if(c.name=="产品系列" || c.name=="大米类" || c.name=="月饼类" || c.name=="粽子类" || c.name=="糕点类"
+                                || c.name=="鲍鱼粽" || c.name=="长形纯碱粽" || c.name=="叉烧蛋黄粽" || c.name=="传统粽" || c.name=="蛋黄粽" || c.name=="豆沙碱水粽" || c.name=="美味咸肉粽" || c.name=="五谷粽" || c.name=="西米粽"){%>
+                                            <% if (theme.customize.thumbnail === true) { %>
+                                                <%if(productionListCount==1){%>
+                                                    <div class="item gallery active left">
+                                                        <div class="row">
+                                                <%}else if(productionListCount==5){%>
+                                                    <div class="item gallery next left">
+                                                        <div class="row">
+                                                <%}else if((productionListCount-1)%4==0 && productionListCount>5){%>
+                                                    <div class="item gallery">
+                                                        <div class="row">
+                                                <%}%>
+                                                        <div class="col-sm-3">
+                                                            <a href="<%- url_for(post.link ? post.link : post.path) %>" class="thumbnail">
+                                                                <% var thumbnailUrl = thumbnail(post) %>
+                                                                <% if (thumbnailUrl) { %>
+                                                                    <img style="height: 147.5px;width: 247.5px;" src="<%- thumbnailUrl%>" alt="<%= post.title %>" class="img-responsive">
+                                                                    <div style="text-align:center"><%=post.title%></div>
+                                                                <% } %>
+                                                            </a>
+                                                        </div>
+                                                <%if(productionListCount%4==0){%>
+                                                        </div>
+                                                    </div>
+                                                <%}%>
+                                                <%productionListCount=productionListCount+1%>
+                                            <% } %>
+                                        <%}%>
+                                    <%})%>
+                                <%})%>
+
+                                <!--<div class="item gallery active left">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <img alt="image" class="img-responsive" src="/css/images/1.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image" class="img-responsive" src="/css/images/3.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive"  src="/css/images/3.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive" src="/css/images/2.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item gallery next left">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive" src="/css/images/1.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive" src="/css/images/1.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive"  src="/css/images/2.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive" src="/css/images/3.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item gallery">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive" src="/css/images/1.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive" src="/css/images/2.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image"  class="img-responsive"  src="/css/images/3.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <img alt="image" class="img-responsive" src="/css/images/1.jpg">
+                                            <div style="text-align:center">testTitle</div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <a data-slide="prev" href="#carousel3" class="left carousel-control">
+                                <span class="icon-prev"></span>
+                            </a>
+                            <a data-slide="next" href="#carousel3" class="right carousel-control">
+                                <span class="icon-next"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    <% } %>
-<% }) %>
-<% if (page.posts.length) { %>
-    </div></section>
-<% } %>
-<% if (page.total > 1) { %>
-    <nav id="page-nav">
-        <span class="pages"><%= _p('nav.current_page', page.current) %><%= _p('nav.total_page', page.total) %></span>
-        <%- paginator({prev_text: '&laquo;', next_text: '&raquo;'}) %>
-    </nav>
-<% } %>-->
+    </div>
+</div>
+</div>

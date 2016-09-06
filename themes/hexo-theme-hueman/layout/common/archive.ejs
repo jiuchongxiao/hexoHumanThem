@@ -8,25 +8,31 @@
         <% } %>
         <% last = year; postCount = 0;%>
         <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="<%- url_for('archives/' + year) %>" class="archive-year"><i class="icon fa fa-calendar-o"></i><%= year %></a>
-            </div>
+
             <div class="archives">
     <% } %>
     <% postCount++; %>
-    <% if (postCount % 2 == 1) { %>
-        <div class="article-row">
-    <% } %>
+        <%if(page.category!="产品系列" && page.category!="大米类" && page.category!="月饼类" && page.category!="粽子类" && page.category!="糕点类"
+         && page.category!="鲍鱼粽" && page.category!="长形纯碱粽"  && page.category!="叉烧蛋黄粽" && page.category!="传统粽" && page.category!="蛋黄粽" && page.category!="豆沙碱水粽" && page.category!="黑米粽" && page.category!="花生瑶柱粽"
+                && page.category!="美味咸肉粽" && page.category!="五谷粽" && page.category!="西米粽"
+        ){%>
 
-            <!--if(page.category=="新闻信息" || page.category=="新闻动态"  || page.category=="最新动态"  || page.category=="相关知识" ){-->
-        <%if(page.category!="产品系列" && page.category!="大米类" && page.category!="月饼类" && page.category!="粽子类" && page.category!="糕点类"){%>
-            <%- partial('summary_news_style', { post: post }) %>
+            <div class="article-row" style="padding-top: 10px;padding-left: 10px;height: 40px;">
+
+                <%- partial('summary_news_style', { post: post }) %>
+
+             </div>
+
         <%}else{%>
+            <% if (postCount % 2 == 1) { %>
+            <div class="article-row" >
+            <% } %>
             <%- partial('summary', { post: post }) %>
+            <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
+            </div>
+            <% } %>
         <%}%>
-    <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
-        </div>
-    <% } %>
+
 <% }) %>
 <% if (page.posts.length) { %>
     </div></section>

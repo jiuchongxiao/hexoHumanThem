@@ -1,8 +1,8 @@
-<header id="header">
+<header id="header" style="padding-bottom:0px;">
     <div id="header-outer" class="outer">
         <div class="container">
-            <div class="container-inner">
-                <div id="header-title">
+            <div class="container-inner" style="">
+                <div id="header-title" style="display:inline-block">
                     <h1 class="logo-wrap">
                         <a href="<%- url_for() %>" class="logo"></a>
                     </h1>
@@ -12,7 +12,7 @@
                         </h2>
                     <% } %>
                 </div>
-                <div id="header-inner" class="nav-container">
+                <div id="header-inner" class="nav-container" style="display:inline-block;float:right;padding-top:33px;-webkit-box-shadow:none;box-shadow:none;width:70%">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
                     <div class="nav-container-inner">
                         <ul id="main-nav">
@@ -30,9 +30,9 @@
                                 </li>
                             <% }} %>
                         </ul>
-                        <nav id="sub-nav">
+                        <!--<nav id="sub-nav">
                             <%- partial('search/index') %>
-                        </nav>
+                        </nav>-->
                     </div>
                 </div>
             </div>
