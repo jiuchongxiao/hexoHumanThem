@@ -7,12 +7,12 @@ categories:
 comments: false
 ---
 
-<img src="/css/images/chashaodanhuangzong/a.jpg">
+<img src="/blog/public/css/images/chashaodanhuangzong/a.jpg">
 
-<img src="/css/images/chashaodanhuangzong/b.jpg">
+<img src="/blog/public/css/images/chashaodanhuangzong/b.jpg">
 
-<img src="/css/images/chashaodanhuangzong/c.jpg">
+<img src="/blog/public/css/images/chashaodanhuangzong/c.jpg">
 
-<img src="/css/images/chashaodanhuangzong/d.jpg">
+<img src="/blog/public/css/images/chashaodanhuangzong/d.jpg">
 
-<img src="/css/images/chashaodanhuangzong/e.jpg">
+<img src="/blog/public/css/images/chashaodanhuangzong/e.jpg">

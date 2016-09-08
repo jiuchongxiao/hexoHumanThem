@@ -7,7 +7,6 @@ categories:
 
 comments: false
 ---
+<img src="/blog/public/css/images/changxingchunjianzong/a.jpg">
 
-<img src="/css/images/changxingchunjianzong/a.jpg">
-
-<img src="/css/images/changxingchunjianzong/b.jpg">
+<img src="/blog/public/css/images/changxingchunjianzong/b.jpg">

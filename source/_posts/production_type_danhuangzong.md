@@ -7,10 +7,10 @@ categories:
 comments: false
 ---
 
-<img src="/css/images/danhuangzong/a.jpg">
+<img src="/blog/public/css/images/danhuangzong/a.jpg">
 
-<img src="/css/images/danhuangzong/b.jpg">
+<img src="/blog/public/css/images/danhuangzong/b.jpg">
 
-<img src="/css/images/danhuangzong/c.jpg">
+<img src="/blog/public/css/images/danhuangzong/c.jpg">
 
-<img src="/css/images/danhuangzong/d.jpg">
+<img src="/blog/public/css/images/danhuangzong/d.jpg">

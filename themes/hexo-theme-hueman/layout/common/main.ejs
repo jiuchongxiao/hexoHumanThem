@@ -53,7 +53,7 @@
                                 <% site.posts.each(function(post, i) { %>
                                     <% post.categories.each(function(c){%>
 
-                                        <%if(c.name=="产品系列" || c.name=="大米类" || c.name=="月饼类" || c.name=="粽子类" || c.name=="糕点类"
+                                        <%if(c.name=="大米类" || c.name=="月饼类" || c.name=="粽子类" || c.name=="糕点类"
                                 || c.name=="鲍鱼粽" || c.name=="长形纯碱粽" || c.name=="叉烧蛋黄粽" || c.name=="传统粽" || c.name=="蛋黄粽" || c.name=="豆沙碱水粽" || c.name=="美味咸肉粽" || c.name=="五谷粽" || c.name=="西米粽"){%>
                                             <% if (theme.customize.thumbnail === true) { %>
                                                 <%if(productionListCount==1){%>
@@ -84,13 +84,16 @@
                                         <%}%>
                                     <%})%>
                                 <%})%>
-
+                                <%if((productionListCount-1)%4!=0){%>
+                                            </div>
+                                        </div>
+                                <%}%>
 
                             </div>
-                            <a data-slide="prev" href="#carousel3" class="left carousel-control">
+                            <a data-slide="prev" href="#carousel3" class="left carousel-control" style="background-image:none">
                                 <span class="icon-prev"></span>
                             </a>
-                            <a data-slide="next" href="#carousel3" class="right carousel-control">
+                            <a data-slide="next" href="#carousel3" class="right carousel-control" style="background-image:none">
                                 <span class="icon-next"></span>
                             </a>
                         </div>

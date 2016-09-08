@@ -7,12 +7,12 @@ categories:
 comments: false
 ---
 
-<img src="/css/images/wuguzong/a.jpg">
+<img src="/blog/public/css/images/wuguzong/a.jpg">
 
-<img src="/css/images/wuguzong/b.jpg">
+<img src="/blog/public/css/images/wuguzong/b.jpg">
 
-<img src="/css/images/wuguzong/c.jpg">
+<img src="/blog/public/css/images/wuguzong/c.jpg">
 
-<img src="/css/images/wuguzong/d.jpg">
+<img src="/blog/public/css/images/wuguzong/d.jpg">
 
-<img src="/css/images/wuguzong/e.jpg">
+<img src="/blog/public/css/images/wuguzong/e.jpg">

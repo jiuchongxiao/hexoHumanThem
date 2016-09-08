@@ -9,12 +9,12 @@ comments: false
 ---
 
 
-<img src="/css/images/ximizong/a.png">
+<img src="/blog/public/css/images/ximizong/a.png">
 
-<img src="/css/images/ximizong/b.png">
+<img src="/blog/public/css/images/ximizong/b.png">
 
-<img src="/css/images/ximizong/c.jpg">
+<img src="/blog/public/css/images/ximizong/c.jpg">
 
-<img src="/css/images/ximizong/d.jpg">
+<img src="/blog/public/css/images/ximizong/d.jpg">
 
-<img src="/css/images/ximizong/e.jpg">
+<img src="/blog/public/css/images/ximizong/e.jpg">

@@ -7,10 +7,10 @@ categories:
 comments: false
 ---
 
-<img src="/css/images/doushajianshuizong/a.jpg">
+<img src="/blog/public/css/images/doushajianshuizong/a.jpg">
 
-<img src="/css/images/doushajianshuizong/b.jpg">
+<img src="/blog/public/css/images/doushajianshuizong/b.jpg">
 
-<img src="/css/images/doushajianshuizong/c.jpg">
+<img src="/blog/public/css/images/doushajianshuizong/c.jpg">
 
-<img src="/css/images/doushajianshuizong/d.jpg">
+<img src="/blog/public/css/images/doushajianshuizong/d.jpg">
