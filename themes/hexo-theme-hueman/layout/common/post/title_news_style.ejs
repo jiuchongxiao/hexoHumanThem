@@ -1,6 +1,6 @@
 
-<%if(post.title.length>14){%>
- <%post.title=post.title.substr(0,40)+"..."%>
+<%if(post.title.length>45){%>
+ <%post.title=post.title.substr(0,45)+"..."%>
 <%}%>
 <% if (post.link) { %>
     <h1 itemprop="name" style="display:inline-block;font-size: 14px;">

@@ -7,4 +7,4 @@ categories:
 comments: false
 ---
 
-{% img  /css/images/a.png 300 100 ffffff %}
+{% img  css/images/a.png 300 100 ffffff %}

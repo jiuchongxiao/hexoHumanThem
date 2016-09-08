@@ -8,4 +8,4 @@ comments: false
 ---
 最新动态
 dddddddddddddddddd大法师打发的分公司的分公司的给换风格和法国法规和地方搞活动
-{% img  /css/images/production.jpg 300 100 ffffff %}
+{% img  css/images/production.jpg 300 100 ffffff %}

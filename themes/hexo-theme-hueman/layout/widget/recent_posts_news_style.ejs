@@ -15,7 +15,13 @@
                 <li>
 
                     <div class="item-inner" style="margin-left: -94px;">
-                        <p class="item-title" style="display:inline-block;float:left"><a href="<%- url_for((post.link?post.link:post.path)) %>" class="title"><%= post.title %></a></p>
+                        <p class="item-title" style="display:inline-block;float:left"><a href="<%- url_for((post.link?post.link:post.path)) %>" class="title">
+                        <%if(post.title.length>14){%>
+                            <%=post.title.substr(0,14)+"..."%>
+                        <%}else{%>
+                            <%=post.title%>
+                        <%}%>
+                        </a></p>
                         <p class="item-date"  style="display:inline-block;float: right;"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
                     </div>
                 </li>
