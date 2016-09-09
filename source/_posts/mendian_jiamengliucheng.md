@@ -7,4 +7,4 @@ categories:
 comments: false
 ---
 
-<img src="/blog/public/css/images/mendian_jiamengliucheng/a.jpg">
+<img src="/css/images/mendian_jiamengliucheng/a.jpg">

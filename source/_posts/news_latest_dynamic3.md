@@ -2,7 +2,7 @@
 title: 好久好久和家里
 categories:
 - 新闻信息
-- 最新动态
+- 新闻动态
 
 comments: false
 ---

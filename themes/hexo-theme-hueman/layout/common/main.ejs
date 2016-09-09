@@ -13,13 +13,11 @@
     </div>
     <div style="display:inline-block;width: 350px;padding:10px;margin: 8px;">
         <h3 class="article-title">最新动态</h3>
-        <% site.posts.each(function(post, i) { %>
-            <%post.categories.each(function(c){%>
-                <%if(c.name=="最新动态"){%>
-                    <%- partial('summary_main', { post: post,newsType:"最新动态" }) %>
-                <%}%>
-            <%})%>
-        <%})%>
+        <%var newDynamicCount=0%>
+        <%site.categories.findOne({name: '新闻动态'}).posts.sort('date', -1).limit(8).each(function(post) {%>
+        <%- partial('summary_main', { post: post,newsType:"最新动态" }) %>
+        <% })%>
+
     </div>
     <div style="display:inline-block;width: 350px;padding:10px;margin: 8px;">
         <h3 class="article-title">联系方式</h3>
@@ -27,9 +25,6 @@
             <%post.categories.each(function(c){%>
                 <%if(c.name=="联系方式"){%>
                      <%- partial('summary_main', { post: post,newsType:"联系方式" }) %>
-
-
-
                 <%}%>
             <%})%>
         <%})%>

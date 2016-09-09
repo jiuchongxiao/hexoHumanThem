@@ -7,7 +7,7 @@ categories:
 comments: false
 ---
 
-<img src="/blog/public/css/images/r.jpg">
+<img src="/css/images/r.jpg">
 
 
 肇庆市鼎湖华记裹蒸粽食品有限公司

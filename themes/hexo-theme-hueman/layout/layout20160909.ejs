@@ -1,0 +1,86 @@
+
+<!--备份  此处 控制点击二级类 直接进入详情，并且左侧没有 导航栏。layout.ejs有导航栏-->
+
+<%- partial('common/head') %>
+<body>
+    <div id="wrap">
+        <%- partial('common/header', null, {cache: !config.relative_link}) %>
+        <%if(is_home()){%>
+            <%- partial('common/lunbo')%>
+        <%}%>
+        <div>
+            <%if(!is_home()){%>
+            <%- partial('common/banner')%>
+            <%}%>
+        </div>
+        <div class="container">
+            <div class="main-body container-inner">
+                <%if(page.category){%>
+                <!--限制点击某些分类-->
+
+
+                <%if(page.category!="产品系列" && page.category!="大米类" && page.category!="月饼类" && page.category!="粽子类" && page.category!="糕点类"
+                        && page.category!="鲍鱼粽" && page.category!="长形纯碱粽"  && page.category!="叉烧蛋黄粽" && page.category!="传统粽" && page.category!="蛋黄粽" && page.category!="豆沙碱水粽" && page.category!="黑米粽" && page.category!="花生瑶柱粽"
+                        && page.category!="美味咸肉粽" && page.category!="五谷粽" && page.category!="西米粽" && page.category!="新闻动态"
+                ){%>
+                    <%var detailFlag = false%>
+                    <% site.categories.each(function(item){ %>
+                        <%if(item.name==page.category && item.parent){%>
+                            <%detailFlag = true%>
+                        <%}%>
+                    <%})%>
+                    <%if(detailFlag){%>
+                        <% page.posts.each(function(post, i) { %>
+                        <div class="main-body-inner" style="padding-left: 0px;background:repeat-y left 0;">
+                            <section id="main">
+                                <div class="main-body-content">
+                                    <%- partial('common/article', { post: post }) %>
+                                </div>
+                            </section>
+                        </div>
+                        <%})%>
+                    <%}else{%>
+                        <div class="main-body-inner">
+
+                            <section id="main">
+                                <%- partial('common/content-title') %>
+                                <div class="main-body-content">
+                                    <%- body %>
+                                </div>
+                            </section>
+                            <%- partial('common/sidebar') %>
+                        </div>
+                    <%}%>
+
+                <%}else{%>
+                    <div class="main-body-inner">
+
+                        <section id="main">
+                            <%- partial('common/content-title') %>
+                            <div class="main-body-content">
+                                <%- body %>
+                            </div>
+                        </section>
+                        <%- partial('common/sidebar') %>
+                    </div>
+
+                <%}%>
+
+
+                <%}else{%>
+                    <div class="main-body-inner" style="padding-left: 0px;background:repeat-y left 0;">
+                        <section id="main">
+                            <div class="main-body-content">
+                                <%- body %>
+                            </div>
+                        </section>
+
+                    </div>
+                <%}%>
+            </div>
+        </div>
+        <%- partial('common/footer_main')%>
+        <%- partial('common/scripts') %>
+    </div>
+</body>
+</html>

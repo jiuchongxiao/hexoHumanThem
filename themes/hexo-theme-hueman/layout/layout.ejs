@@ -13,6 +13,9 @@
         <div class="container">
             <div class="main-body container-inner">
                 <%if(page.category){%>
+                <!--限制点击某些分类-->
+
+
 
                     <div class="main-body-inner">
 
@@ -24,13 +27,20 @@
                         </section>
                         <%- partial('common/sidebar') %>
                     </div>
+
+
+
                 <%}else{%>
-                    <div class="main-body-inner" style="padding-left: 0px;background:repeat-y left 0;">
+                    <div class="main-body-inner" <%if(is_home()){%>style="padding-left: 0px;background:repeat-y left 0;"<%}%>>
                         <section id="main">
                             <div class="main-body-content">
                                 <%- body %>
                             </div>
+
                         </section>
+                        <%if(!is_home()){%>
+                            <%- partial('common/sidebar') %>
+                        <%}%>
 
                     </div>
                 <%}%>

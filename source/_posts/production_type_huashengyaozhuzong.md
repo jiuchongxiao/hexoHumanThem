@@ -8,10 +8,10 @@ comments: false
 ---
 
 
-<img src="/blog/public/css/images/huashengyaozhuzong/b.jpg">
+<img src="/css/images/huashengyaozhuzong/b.jpg">
 
-<img src="/blog/public/css/images/huashengyaozhuzong/c.jpg">
+<img src="/css/images/huashengyaozhuzong/c.jpg">
 
-<img src="/blog/public/css/images/huashengyaozhuzong/d.jpg">
+<img src="/css/images/huashengyaozhuzong/d.jpg">
 
-<img src="/blog/public/css/images/huashengyaozhuzong/e.jpg">
+<img src="/css/images/huashengyaozhuzong/e.jpg">

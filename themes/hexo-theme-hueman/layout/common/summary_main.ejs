@@ -15,7 +15,7 @@
             <%- partial('common/thumbnail', { counter: true }) %>
             <% } %>
             <p class="article-excerpt">
-                <%- excerpt(post) %>
+                <% if (post.description){ %> <%- post.description %> <% } else { %> <%- post.excerpt %> <% } %>
             </p>
         </div>
     <%}else if(newsType=="联系方式"){%>

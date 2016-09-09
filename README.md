@@ -19,4 +19,16 @@ hexo themes:https://github.com/hexojs/hexo/wiki/Themes
   2.访问：http://localhost:4000/
   
   3.hexo g生成的静态文件在本地没法访问
+
+
+  4.部署
+        1)本地启动hexo s 则_config.yml中的root 可以为/或者/blog/public        对应的post中的图片路径为/css/images/ 或者/blog/public/css/images/
+        2)hexo g生成的静态文件   部署到tomcat
+            2.1)部署到webapp下   则_config.yml中的root为/blog/public    且  post中的图片路径为/blog/public/css/images/
+            2.2)部署到root下      则_config.yml中的root为/blog/public 且 post中的图片路径为/css/images/
+
+            方法：替换post中图片的路径 ctrl+shift+r  全文替换
+
+         部署到root方式：
+                 将附件替换tomcat下webapps文件夹中的ROOT。部署成功后访问方式为http://192.168.3.102:8080/    其中ip为tomcat所在服务器 8080为tomcat端口
   

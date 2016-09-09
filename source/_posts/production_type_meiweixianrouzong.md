@@ -9,12 +9,12 @@ comments: false
 ---
 
 
-<img src="/blog/public/css/images/meiweixianrouzong/a.jpg">
+<img src="/css/images/meiweixianrouzong/a.jpg">
 
-<img src="/blog/public/css/images/meiweixianrouzong/b.png">
+<img src="/css/images/meiweixianrouzong/b.png">
 
-<img src="/blog/public/css/images/meiweixianrouzong/c.png">
+<img src="/css/images/meiweixianrouzong/c.png">
 
-<img src="/blog/public/css/images/meiweixianrouzong/d.jpg">
+<img src="/css/images/meiweixianrouzong/d.jpg">
 
-<img src="/blog/public/css/images/meiweixianrouzong/e.jpg">
+<img src="/css/images/meiweixianrouzong/e.jpg">

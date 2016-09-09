@@ -12,5 +12,5 @@ comments: false
 
 真诚地希望与国内外各界朋友和企业界人士建立友好合作关系，谋求共同发展。
 
-<img src="/blog/public/css/images/company_linian/a.jpg">
+<img src="/css/images/company_linian/a.jpg">
 

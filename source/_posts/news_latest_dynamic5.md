@@ -2,7 +2,7 @@
 title: 净利润加特人今天来劲儿呕吐及了空间大发了个空间大发了开关机
 categories:
 - 新闻信息
-- 最新动态
+- 新闻动态
 
 comments: false
 ---

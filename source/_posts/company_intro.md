@@ -3,14 +3,14 @@ title: 公司简介
 categories:
 - 公司信息
 - 公司简介
-
+description: 肇庆市鼎湖华记裹蒸食品有限公司成立于1995年，坐落于肇庆市鼎湖区，是一家以生产、加工、销售为一体的裹蒸粽食品专业企业。
 comments: false
 ---
 
 
-<img src="/blog/public/css/images/a.jpg">
+<img src="/css/images/a.jpg">
 
-<img src="/blog/public/css/images/b.jpg">
+<img src="/css/images/b.jpg">
 
 　　肇庆市鼎湖华记裹蒸食品有限公司成立于1995年，坐落于肇庆市鼎湖区，是一家以生产、加工、销售为一体的裹蒸粽食品专业企业。本着“用品质打造肇庆裹蒸百年品牌城市名片”的理念，产品被广大游客认可，用专业和实力和对传统美食传承的决心去铸造桂城華记的良好的口碑和业界的认可，打造一个属于桂城華记的金漆招牌。
 

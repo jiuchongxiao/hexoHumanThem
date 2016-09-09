@@ -8,6 +8,6 @@ categories:
 comments: false
 ---
 
-<img src="/blog/public/css/images/baoyuzong/a.jpg">
+<img src="/css/images/baoyuzong/a.jpg">
 
-<img src="/blog/public/css/images/baoyuzong/b.jpg">
+<img src="/css/images/baoyuzong/b.jpg">

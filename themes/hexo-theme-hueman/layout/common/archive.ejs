@@ -12,16 +12,26 @@
             <div class="archives">
     <% } %>
     <% postCount++; %>
+
         <%if(page.category!="产品系列" && page.category!="大米类" && page.category!="月饼类" && page.category!="粽子类" && page.category!="糕点类"
          && page.category!="鲍鱼粽" && page.category!="长形纯碱粽"  && page.category!="叉烧蛋黄粽" && page.category!="传统粽" && page.category!="蛋黄粽" && page.category!="豆沙碱水粽" && page.category!="黑米粽" && page.category!="花生瑶柱粽"
                 && page.category!="美味咸肉粽" && page.category!="五谷粽" && page.category!="西米粽"
         ){%>
+            <%var detailFlag = false%>
+            <% site.categories.each(function(item){ %>
+                <%if(item.name==page.category && item.parent){%>
+                    <%detailFlag = true%>
+                <%}%>
+            <%})%>
+            <%if(detailFlag && site.categories.findOne({name: page.category}).posts.length==1){%>
+                <%- partial('article', { post: post }) %>
+            <%}else{%>
+                <div class="article-row" style="padding-top: 10px;padding-left: 10px;height: 40px;">
 
-            <div class="article-row" style="padding-top: 10px;padding-left: 10px;height: 40px;">
+                    <%- partial('summary_news_style', { post: post }) %>
 
-                <%- partial('summary_news_style', { post: post }) %>
-
-             </div>
+                 </div>
+            <%}%>
 
         <%}else{%>
             <% if (postCount % 2 == 1) { %>
