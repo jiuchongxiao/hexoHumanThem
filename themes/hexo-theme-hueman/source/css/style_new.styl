@@ -94,8 +94,31 @@ html,body{
 
 
 //------------------------------------------------------媒体查询
-//@media screen and (max-width: 600px) {
-//    body {
-//        background-color:red;
-//    }
-//}
+@media screen and (max-width: 800px) {
+    .footer_new1{
+        height: auto;
+    }
+    .footer_new1  .footer_new1_container .footer_new1_left,
+    .footer_new1  .footer_new1_container .footer_new1_center,
+    .footer_new1  .footer_new1_container .footer_new1_right{
+        width:100%;
+    }
+    .footer_new1  .footer_new1_container ul{
+        margin-right:10%;
+    }
+    .footer_new1  .footer_new1_container .footer_new1_right .footer_ol{
+       margin-left:0px !important;
+    }
+    .footer_new2_right {
+        display: inline-block;
+        clear:  both;
+    }
+    .footer_new2_right img {
+        width:  29%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .nav-container {
+        width: 100% !important;
+    }
+}
