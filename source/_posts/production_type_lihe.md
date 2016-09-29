@@ -9,8 +9,7 @@ comments: false
 ---
 
 <img src="/css/images/lihe/1.jpg">
-<img src="/css/images/lihe/2.jpg">
-<img src="/css/images/lihe/3.jpg">
+
 <img src="/css/images/lihe/4.jpg">
 净含量（规格） 	1.16kg 	是否进口 	否
 保质期 	真空粽在常温下可保质150天 	卫生许可证 	QS4412 2401 0809
